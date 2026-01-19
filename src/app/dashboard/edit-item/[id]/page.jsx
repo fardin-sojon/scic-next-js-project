@@ -48,7 +48,7 @@ export default function EditItemPage({ params }) {
         }
       } catch (error) {
         console.error('Error fetching item:', error);
-        toast.error('Failed to load item data');
+        toast.error('Failed to load item data', { duration: 2000 });
       } finally {
         setLoading(false);
       }
@@ -103,11 +103,11 @@ export default function EditItemPage({ params }) {
         features: finalFeatures
       });
       
-      toast.success('Item updated successfully!');
+      toast.success('Item updated successfully!', { duration: 2000 });
       router.push(`/items/${id}`);
     } catch (error) {
       console.error('Error updating item:', error);
-      toast.error('Failed to update item. Please try again.');
+      toast.error('Failed to update item. Please try again.', { duration: 2000 });
     } finally {
       setSubmitting(false);
     }

@@ -68,11 +68,11 @@ export default function AddItemPage() {
         features: finalFeatures
       });
       console.log('Server response:', response.data);
-      toast.success('Product added successfully!');
+      toast.success('Product added successfully!', { duration: 2000 });
       router.push('/items');
     } catch (error) {
       console.error('Error adding item:', error);
-      toast.error(error.response?.data?.message || 'Failed to add item');
+      toast.error(error.response?.data?.message || 'Failed to add item', { duration: 2000 });
     } finally {
       setLoading(false);
     }

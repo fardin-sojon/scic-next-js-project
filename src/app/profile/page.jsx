@@ -59,11 +59,11 @@ export default function ProfilePage() {
         photoURL: editForm.photoURL
       });
 
-      toast.success('Profile updated successfully!');
+      toast.success('Profile updated successfully!', { duration: 2000 });
       setIsEditing(false);
     } catch (error) {
       console.error('Error updating profile:', error);
-      toast.error('Failed to update profile');
+      toast.error('Failed to update profile', { duration: 2000 });
     } finally {
       setSaving(false);
     }

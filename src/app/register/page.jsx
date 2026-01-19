@@ -43,11 +43,11 @@ function RegisterContent() {
       
       Cookies.set('auth_token', await userCredential.user.getIdToken(), { expires: 1 });
       
-      toast.success('Account created successfully!');
+      toast.success('Account created successfully!', { duration: 2000 });
       router.push(redirect);
     } catch (error) {
       console.error('Registration error:', error);
-      toast.error(error.message || 'Failed to register');
+      toast.error(error.message || 'Failed to register', { duration: 2000 });
     } finally {
       setLoading(false);
     }
@@ -69,11 +69,11 @@ function RegisterContent() {
       });
 
       Cookies.set('auth_token', await result.user.getIdToken(), { expires: 1 });
-      toast.success('Signed up with Google!');
+      toast.success('Signed up with Google!', { duration: 2000 });
       router.push(redirect);
     } catch (error) {
       console.error('Google login error:', error);
-      toast.error(error.message);
+      toast.error(error.message, { duration: 2000 });
     }
   };
 
@@ -137,7 +137,7 @@ function RegisterContent() {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none"
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none z-50 pointer-events-auto"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>

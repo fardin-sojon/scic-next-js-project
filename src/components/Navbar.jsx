@@ -32,7 +32,7 @@ export default function Navbar() {
     try {
       await signOut(auth);
       Cookies.remove('auth_token');
-      toast.success('Logged out successfully');
+      toast.success('Logged out successfully', { duration: 2000 });
       router.push('/login');
       setIsDropdownOpen(false);
     } catch (error) {

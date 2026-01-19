@@ -7,6 +7,7 @@ import Cookies from 'js-cookie';
 import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 
 function LoginContent() {
   const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ function LoginContent() {
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirect = searchParams.get('redirect') || '/dashboard/add-item';
+  const redirect = searchParams.get('redirect') || '/';
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
@@ -34,11 +35,14 @@ function LoginContent() {
         })
       });
       Cookies.set('auth_token', await userCredential.user.getIdToken(), { expires: 1 });
-      toast.success('Logged in successfully!');
-      router.push(redirect); 
+      toast.success('Logged in successfully!', { duration: 2000 });
+      router.refresh(); // Ensure middleware sees the cookie
+      setTimeout(() => {
+        router.push(redirect); 
+      }, 100); 
     } catch (error) {
       console.error('Login error:', error);
-      toast.error('Invalid email or password');
+      toast.error('Invalid email or password', { duration: 2000 });
     } finally {
       setLoading(false);
     }
@@ -60,11 +64,14 @@ function LoginContent() {
       });
 
       Cookies.set('auth_token', await result.user.getIdToken(), { expires: 1 });
-      toast.success('Logged in with Google!');
-      router.push(redirect);
+      toast.success('Logged in with Google!', { duration: 2000 });
+      router.refresh();
+      setTimeout(() => {
+        router.push(redirect);
+      }, 100);
     } catch (error) {
       console.error('Google login error:', error);
-      toast.error(error.message);
+      toast.error(error.message, { duration: 2000 });
     }
   };
 
@@ -100,7 +107,7 @@ function LoginContent() {
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none z-20"
+              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none z-50 pointer-events-auto"
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
