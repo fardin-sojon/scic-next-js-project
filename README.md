@@ -1,25 +1,9 @@
-# 🛍️ SCIC Next.js E-commerce Project
+# 🛍️ NextShop
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)
-![Firebase](https://img.shields.io/badge/Firebase-Auth-orange?style=for-the-badge&logo=firebase)
+**NextShop is a modern e-commerce platform built with Next.js.**
+It allows users to browse, add, and manage products with a responsive and clean interface. Users can also register, login, and manage their own products securely.
 
-A modern, full-stack e-commerce application built with **Next.js 15**, **MongoDB**, and **Firebase Authentication**. This project features a dynamic product catalog, user authentication, a protected admin dashboard, and a responsive UI designed with Tailwind CSS.
-
----
-
-## 🔗 Quick Links
-
-<div align="center">
-  <a href="https://scic-next-js.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀_View_Live_Demo-000000?style=for-the-badge&logo=vercel" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/fardin-sojon/scic-next-js-project.git" target="_blank">
-    <img src="https://img.shields.io/badge/📂_GitHub_Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repo" />
-  </a>
-</div>
+🌐 [Live Link](https://scic-next-js.vercel.app/)
 
 ---
 
