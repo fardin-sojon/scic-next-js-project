@@ -1,4 +1,4 @@
-# 🛍️ NextShop
+# 🛍️ SCIC Next.js E-commerce Project
 
 **NextShop is a modern e-commerce platform built with Next.js.**
 It allows users to browse, add, and manage products with a responsive and clean interface. Users can also register, login, and manage their own products securely.
@@ -90,7 +90,7 @@ Open [http://localhost:5000](http://localhost:5000) in your browser.
 
 ## 🤝 Contact
 
-**Fardin Sojon**  
+**Fardin Rahman Sojon**  
 📧 Email: [fardinsojon@gmail.com](mailto:fardinsojon@gmail.com)  
 
 ---
