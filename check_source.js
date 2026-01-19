@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-const uriSolo = "mongodb+srv://scic_nextJS_db:ppOrHAhrumItcDy9@simple-crud-mongodb-pra.v6jm7nb.mongodb.net/solo-app?appName=simple-crud-mongodb-practice";
-const uriScic = "mongodb+srv://scic_nextJS_db:ppOrHAhrumItcDy9@simple-crud-mongodb-pra.v6jm7nb.mongodb.net/scic-app?appName=simple-crud-mongodb-practice";
+const uriSolo = process.env.MONGODB_URI_SOLO;
+const uriScic = process.env.MONGODB_URI;
 
 const checkDatabases = async () => {
     try {
